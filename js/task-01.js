@@ -1,13 +1,10 @@
-const categoriesEl = document.querySelectorAll(".item");
-const sumCategoriesEl = categoriesEl.length;
+const categories = document.querySelector("#categories");
+const categoriesItem = document.querySelectorAll(".item");
+console.log("Number of categories: ", categories.children.length);
 
-const categoriesTitleEl = document.querySelectorAll(".item h2");
-const listEl = document.querySelectorAll(".item > h2 + ul");
+categoriesItem.forEach((el) => {
+   console.log("Category:", el.children[0].textContent);
+   console.log("Elements: ", el.children[1].children.length);
+});
 
-console.log("Number of categories: ", sumCategoriesEl);
-console.log("Category: ", categoriesTitleEl[0].textContent);
-console.log("Elements: ", listEl[0].children.length);
-console.log("Category: ", categoriesTitleEl[1].textContent);
-console.log("Elements: ", listEl[1].children.length);
-console.log("Category: ", categoriesTitleEl[2].textContent);
-console.log("Elements: ", listEl[2].children.length);
+
